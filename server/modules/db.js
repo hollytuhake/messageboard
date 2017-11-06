@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var databaseUrl = 'mongodb://localhost:27017/realestate';
+var databaseUrl = 'mongodb://localhost:27017/messages';
 
 mongoose.connection.on('connected', function () {
     console.log('Mongoose is connected');
