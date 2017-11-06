@@ -1,0 +1,10 @@
+<form ng-submit="mc.addMessage(mc.message)">
+    <input type="text" placeholder="Your Name" ng-model="mc.message.name">
+    <input type="text" placeholder="Your Message" ng-model="mc.message.message">
+    <input type="submit">
+</form>
+
+<div ng-repeat="message in mc.messages">
+    <p>Contributor: {{message.name}}</p>
+    <p>Message: {{message.message}}</p>
+</div>
