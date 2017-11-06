@@ -17,4 +17,16 @@ app.controller('MessageController', ['$http', function ($http) {
        // self.refreshMessages();
     }
 
+    self.refreshMessages = function () {
+        console.log('in refresh messages');
+        $http.get('/messages').then(function (response) {
+            console.log(response.data);
+            self.messages = response.data;
+        }).catch(function (error) {
+            console.log('Could not GET data');
+        });
+    };
+
+    self.refreshMessages();
+
 }])

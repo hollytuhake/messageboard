@@ -24,4 +24,15 @@ router.post('/', function (req, res) {
     });
 });
 
+router.get('/', function (req, res) {
+    Message.find({}, function (err, foundMessages) {
+        if (err) {
+            console.log('Error', err);
+            res.sendStatus(500);
+        } else {
+            res.send(foundMessages);
+        }
+    });
+});
+
 module.exports = router;
