@@ -14,7 +14,7 @@ app.controller('MessageController', ['$http', function ($http) {
         }).catch(function (err) {
             console.log('Add message Failed!');
         })
-       // self.refreshMessages();
+        self.refreshMessages();
     }
 
     self.refreshMessages = function () {
